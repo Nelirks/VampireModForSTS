@@ -6,5 +6,9 @@
 "theVampire:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"theVampire:Thirst": {
+        "NAME": "Thirst",
+        "DESCRIPTIONS" : ["At the end of the encounter, lose #b", " HP."]
 }
 }
