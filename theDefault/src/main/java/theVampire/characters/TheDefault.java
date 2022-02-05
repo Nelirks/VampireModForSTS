@@ -48,7 +48,7 @@ public class TheDefault extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_DEFAULT;
+        public static AbstractPlayer.PlayerClass THE_VAMPIRE;
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
         public static AbstractCard.CardColor COLOR_GRAY;
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
@@ -65,7 +65,7 @@ public class TheDefault extends CustomPlayer {
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
 
@@ -79,29 +79,11 @@ public class TheDefault extends CustomPlayer {
 
     // =============== /STRINGS/ =================
 
-
-    // =============== TEXTURES OF BIG ENERGY ORB ===============
-
-    public static final String[] orbTextures = {
-            "theVampireResources/images/char/defaultCharacter/orb/layer1.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer2.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer3.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer4.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer5.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer6.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer1d.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer2d.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer3d.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer4d.png",
-            "theVampireResources/images/char/defaultCharacter/orb/layer5d.png",};
-
-    // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
-
     // =============== CHARACTER CLASS START =================
 
     public TheDefault(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures,
-                "theVampireResources/images/char/defaultCharacter/orb/vfx.png", null,
+        super(name, setClass, null,
+                null, null,
                 new SpriterAnimation(
                         "theVampireResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
 

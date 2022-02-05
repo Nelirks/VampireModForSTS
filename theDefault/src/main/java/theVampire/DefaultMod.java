@@ -70,8 +70,8 @@ public class DefaultMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Vampire Mod";
-    private static final String AUTHOR = "Nelirks"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A test mod by Nelirks.";
+    private static final String AUTHOR = "Nelirks & Grunlus"; // And pretty soon - You!
+    private static final String DESCRIPTION = "A test mod by Nelirks & Grunlus.";
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -237,13 +237,13 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_VAMPIRE.toString());
         
-        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_VAMPIRE),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_VAMPIRE);
         
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheDefault.Enums.THE_VAMPIRE.toString());
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -301,7 +301,7 @@ public class DefaultMod implements
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+            .playerClass(TheDefault.Enums.THE_VAMPIRE) // Character specific event
             .create();
 
         // Add the event
@@ -321,7 +321,7 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_VAMPIRE);
         
         logger.info("Done editing potions");
     }
