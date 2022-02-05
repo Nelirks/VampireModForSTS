@@ -2,11 +2,13 @@ package theVampire.cards;
 
 import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import jdk.nashorn.internal.runtime.regexp.joni.Warnings;
 import theVampire.DefaultMod;
 import theVampire.characters.TheDefault;
 
@@ -17,10 +19,10 @@ import static theVampire.DefaultMod.makeCardPath;
 public class CardTemplate extends AbstractDynamicCard {
 
     /*
-     * "Hey, I wanna make a bunch of cards now." - You, probably.
+     * "Hey, I want to make a bunch of cards now." - You, probably.
      * ok cool my dude no problem here's the most convenient way to do it:
      *
-     * Copy all of the code here (Ctrl+A > Ctrl+C)
+     * Copy all the code here (Ctrl+A > Ctrl+C)
      * Ctrl+Shift+A and search up "file and code template"
      * Press the + button at the top and name your template whatever it is for - "AttackCard" or "PowerCard" or something up to you.
      * Read up on the instructions at the bottom. Basically replace anywhere you'd put your cards name with ${NAME}
