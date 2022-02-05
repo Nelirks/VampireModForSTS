@@ -49,5 +49,11 @@
   "theVampire:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theVampire:Devour": {
+    "NAME": "Devour",
+    "DESCRIPTION": "Deal !D! damage, Enemy loses 2 Strength.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, Enemy loses 2 Strength, Gain 2 Strength."
   }
 }
+
