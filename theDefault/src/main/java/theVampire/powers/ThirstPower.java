@@ -26,13 +26,12 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public ThirstPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public ThirstPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
         this.amount = amount;
-        this.source = source;
 
         type = PowerType.DEBUFF;
         isTurnBased = false;
@@ -58,6 +57,6 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public AbstractPower makeCopy() {
-        return new ThirstPower(owner, source, amount);
+        return new ThirstPower(owner, amount);
     }
 }

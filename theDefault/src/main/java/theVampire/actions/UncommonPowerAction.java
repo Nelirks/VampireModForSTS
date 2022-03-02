@@ -47,7 +47,7 @@ public class UncommonPowerAction extends AbstractGameAction {
             for (int i = 0; i < effect; ++i) {
                 
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                        new ThirstPower(p, p, magicNumber), magicNumber,
+                        new ThirstPower(p, magicNumber), magicNumber,
                         AttackEffect.BLUNT_LIGHT));
             }
             if (!freeToPlayOnce) {

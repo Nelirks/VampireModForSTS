@@ -58,6 +58,10 @@
   "theVampire:Blood": {
     "NAME": "Blood",
     "DESCRIPTION": "Remove !M! Thirst. Exhaust"
+  },
+  "theVampire:Temptation": {
+    "NAME": "Temptation",
+    "DESCRIPTION": "Deal !D! damage 2 times. Spend !M! Thirst to gain !M! Strength and !M! Blood"
   }
 }
 

@@ -36,17 +36,14 @@ public class Blood extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int UPGRADED_COST = 0;
-
-    private static final int MAGIC_NUMBER = 2;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     // /STAT DECLARATION/
 
 
     public Blood() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = MAGIC_NUMBER;
+        baseMagicNumber = 2;
+        magicNumber = baseMagicNumber;
     }
 
 
@@ -57,7 +54,7 @@ public class Blood extends AbstractDynamicCard {
             if (p.getPower("theVampire:Thirst").amount <= magicNumber)
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "theVampire:Thirst"));
             else
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThirstPower(p, p, 0), -magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThirstPower(p, 0), -magicNumber));
         }
     }
 
@@ -67,7 +64,7 @@ public class Blood extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }
