@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theVampire.DefaultMod;
-import theVampire.actions.HitAndFeast;
+import theVampire.actions.HitAndFeastAction;
 import theVampire.characters.TheDefault;
 
 import java.util.ArrayList;
@@ -55,7 +55,7 @@ public class Temptation extends AbstractDynamicCard {
         List<AbstractGameAction> actions = new ArrayList<>();
         actions.add(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
         actions.add(new MakeTempCardInDrawPileAction(new Blood(), magicNumber, true, true));
-        AbstractDungeon.actionManager.addToBottom(new HitAndFeast(m, new DamageInfo(m, damage, damageTypeForTurn), 2, magicNumber, actions, false));
+        AbstractDungeon.actionManager.addToBottom(new HitAndFeastAction(m, new DamageInfo(m, damage, damageTypeForTurn), 2, magicNumber, actions, false));
     }
 
     // Upgraded stats.

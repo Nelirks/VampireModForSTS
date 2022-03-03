@@ -2,26 +2,22 @@ package theVampire.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import theVampire.cards.Blood;
 import theVampire.powers.ThirstPower;
 
 import java.util.List;
 
-public class HitAndFeast extends AbstractGameAction{
+public class HitAndFeastAction extends AbstractGameAction{
     private int feastAmount;
     private DamageInfo info;
     private int multiAttack;
     private List<AbstractGameAction> actions;
     private boolean applyIfEnd;
 
-    public HitAndFeast(AbstractCreature target, DamageInfo info, int multiAttack, int feastAmount, List<AbstractGameAction> actions, boolean applyIfEnd) {
+    public HitAndFeastAction(AbstractCreature target, DamageInfo info, int multiAttack, int feastAmount, List<AbstractGameAction> actions, boolean applyIfEnd) {
         this.info = info;
         this.setValues(target, info);
         this.multiAttack = multiAttack;
@@ -32,7 +28,7 @@ public class HitAndFeast extends AbstractGameAction{
         this.applyIfEnd = applyIfEnd;
     }
 
-    public HitAndFeast(AbstractCreature target, DamageInfo info, int feastAmount, List<AbstractGameAction> actions) {
+    public HitAndFeastAction(AbstractCreature target, DamageInfo info, int feastAmount, List<AbstractGameAction> actions) {
         this(target, info, 1, feastAmount, actions, false);
     }
 
