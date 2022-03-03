@@ -1,19 +1,19 @@
 package theVampire.cards;
 
-import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theVampire.DefaultMod;
+import theVampire.actions.HitAndFeast;
 import theVampire.characters.TheDefault;
-import theVampire.powers.ThirstPower;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static theVampire.DefaultMod.makeCardPath;
 
@@ -52,21 +52,11 @@ public class Temptation extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
-        System.out.println("MAGIC NUMBER : " + magicNumber);
-        if (p.hasPower("theVampire:Thirst") && p.getPower("theVampire:Thirst").amount >= magicNumber) {
-            if (p.getPower("theVampire:Thirst").amount == magicNumber)
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "theVampire:Thirst"));
-            else
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThirstPower(p, 0), -magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-            for (int i = 0; i < magicNumber; ++i) {
-                AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(new Blood()));
-            }
-        }
+        List<AbstractGameAction> actions = new ArrayList<>();
+        actions.add(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        actions.add(new MakeTempCardInDrawPileAction(new Blood(), magicNumber, true, true));
+        AbstractDungeon.actionManager.addToBottom(new HitAndFeast(m, new DamageInfo(m, damage, damageTypeForTurn), 2, magicNumber, actions, false));
     }
-    //TODO : corriger le problème du Thirst ne se retirant pas si l'ennemi est tué
 
     // Upgraded stats.
     @Override

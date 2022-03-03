@@ -61,7 +61,7 @@
   },
   "theVampire:Temptation": {
     "NAME": "Temptation",
-    "DESCRIPTION": "Deal !D! damage 2 times. Spend !M! Thirst to gain !M! Strength and !M! Blood"
+    "DESCRIPTION": "Deal !D! damage 2 times. thevampire:Feast !D! : gain !M! Strength and !M! Blood."
   }
 }
 
