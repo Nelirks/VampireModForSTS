@@ -57,11 +57,19 @@
   },
   "theVampire:Blood": {
     "NAME": "Blood",
-    "DESCRIPTION": "Remove !M! Thirst. Exhaust"
+    "DESCRIPTION": "Remove !M! thevampire:Thirst. Exhaust"
   },
   "theVampire:Temptation": {
     "NAME": "Temptation",
     "DESCRIPTION": "Deal !D! damage 2 times. thevampire:Feast !D! : gain !M! Strength and !M! Blood."
+  },
+  "theVampire:SelfControl": {
+    "NAME": "Self Control",
+    "DESCRIPTION": "Gain !B! Block and !M! thevampire:Thirst."
+  },
+  "theVampire:Reserve": {
+    "NAME": "Reserve",
+    "DESCRIPTION": "At the end of the encounter, ignore !M! thevampire:Thirst"
   }
 }
 

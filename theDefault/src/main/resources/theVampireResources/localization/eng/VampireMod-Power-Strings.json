@@ -10,5 +10,9 @@
 "theVampire:Thirst": {
         "NAME": "Thirst",
         "DESCRIPTIONS" : ["At the end of the encounter, lose #b", " HP."]
+},
+"theVampire:Reserve": {
+        "NAME": "Reserve",
+        "DESCRIPTIONS" : ["At the end of the encounter, ignore #b", " Thirst."]
 }
 }

@@ -1,10 +1,9 @@
 [
   {
     "NAMES": [
-      "keyword",
-      "keywords"
+      "thirst"
     ],
-    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+    "DESCRIPTION": "At the end of the encounter, lose X HP."
   },
   {
     "PROPER_NAME": "Multiword Keyword",
@@ -22,6 +21,6 @@
       "feast",
       "feasted"
     ],
-    "DESCRIPTION" : "Feasting makes you lose Thirst."
+    "DESCRIPTION" : "To Feast, lose X Thirst."
   }
 ]

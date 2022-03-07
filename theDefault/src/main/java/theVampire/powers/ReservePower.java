@@ -14,10 +14,10 @@ import theVampire.util.TextureLoader;
 
 import static theVampire.DefaultMod.makePowerPath;
 
-public class ThirstPower extends AbstractPower implements CloneablePowerInterface {
+public class ReservePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("Thirst");
+    public static final String POWER_ID = DefaultMod.makeID("Reserve");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,7 +27,7 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public ThirstPower(final AbstractCreature owner, final int amount) {
+    public ReservePower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -35,7 +35,7 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
         this.source = AbstractDungeon.player;
         this.amount = amount;
 
-        type = PowerType.DEBUFF;
+        type = PowerType.BUFF;
         isTurnBased = false;
 
         // We load those textures here.
@@ -43,15 +43,6 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
-    }
-
-    // At the end of the turn, remove gained Dexterity.
-    @Override
-    public void onVictory () {
-        if (owner.hasPower("theVampire:Reserve"))
-            owner.damage(new DamageInfo(owner, amount - owner.getPower("theVampire:Reserve").amount));
-        else
-            owner.damage(new DamageInfo(owner, amount));
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
@@ -62,6 +53,6 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public AbstractPower makeCopy() {
-        return new ThirstPower(owner, amount);
+        return new ReservePower(owner, amount);
     }
 }
