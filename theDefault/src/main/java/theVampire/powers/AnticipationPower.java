@@ -3,6 +3,8 @@ package theVampire.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,10 +16,10 @@ import theVampire.util.TextureLoader;
 
 import static theVampire.DefaultMod.makePowerPath;
 
-public class ThirstPower extends AbstractPower implements CloneablePowerInterface {
+public class AnticipationPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("Thirst");
+    public static final String POWER_ID = DefaultMod.makeID("Anticipation");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -25,7 +27,7 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public ThirstPower(final AbstractCreature owner, final int amount) {
+    public AnticipationPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -44,13 +46,14 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     }
 
     @Override
-    public void onVictory () {
-        if (owner.hasPower("theVampire:Reserve"))
-            owner.damage(new DamageInfo(owner, amount - owner.getPower("theVampire:Reserve").amount));
-        else
-            owner.damage(new DamageInfo(owner, amount));
+    public void onCardDraw(AbstractCard card) {
+        if (card.cardID.equals("theVampire:Blood") && !owner.hasPower("No Draw")) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new HealAction(owner, owner, amount));
+        }
     }
 
+    // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
