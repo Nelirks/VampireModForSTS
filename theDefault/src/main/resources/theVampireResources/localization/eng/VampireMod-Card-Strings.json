@@ -53,11 +53,11 @@
   "theVampire:Devour": {
     "NAME": "Devour",
     "DESCRIPTION": "Deal !D! damage, Enemy loses 2 Strength. Exhaust",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, Enemy loses 2 Strength, Gain 2 Strength. Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, Enemy loses 2 Strength, Gain 2 Strength. NL Exhaust."
   },
   "theVampire:Blood": {
     "NAME": "Blood",
-    "DESCRIPTION": "Remove !M! thevampire:Thirst. Exhaust."
+    "DESCRIPTION": "Remove !M! thevampire:Thirst. NL Exhaust."
   },
   "theVampire:Temptation": {
     "NAME": "Temptation",
@@ -74,6 +74,11 @@
   "theVampire:Anticipation": {
     "NAME": "Anticipation",
     "DESCRIPTION": "Whenever you draw Blood, heal 1 HP."
+  },
+  "theVampire:CrimsonShield": {
+    "NAME": "Crimson Shield",
+    "DESCRIPTION": "Converts the next damage you are dealt into thevampire:Thirst.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Converts the next damage you are dealt into thevampire:Thirst."
   }
 }
 

@@ -3,7 +3,9 @@ package theVampire.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -16,10 +18,10 @@ import theVampire.util.TextureLoader;
 
 import static theVampire.DefaultMod.makePowerPath;
 
-public class AnticipationPower extends AbstractPower implements CloneablePowerInterface {
+public class CrimsonShieldPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("Anticipation");
+    public static final String POWER_ID = DefaultMod.makeID("CrimsonShield");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,7 +29,7 @@ public class AnticipationPower extends AbstractPower implements CloneablePowerIn
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public AnticipationPower(final AbstractCreature owner, final int amount) {
+    public CrimsonShieldPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -35,7 +37,7 @@ public class AnticipationPower extends AbstractPower implements CloneablePowerIn
         this.source = AbstractDungeon.player;
         this.amount = amount;
 
-        type = PowerType.BUFF;
+        type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
 
         // We load those textures here.
@@ -45,18 +47,22 @@ public class AnticipationPower extends AbstractPower implements CloneablePowerIn
         updateDescription();
     }
 
-    @Override
-    public void onCardDraw(AbstractCard card) {
-        if (card.cardID.equals("theVampire:Blood") && !owner.hasPower("No Draw")) {
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(new HealAction(owner, owner, amount));
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if (damageAmount > 0) {
+            this.addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
+            this.addToTop(new ApplyPowerAction(owner, owner, new ThirstPower(owner, damageAmount)));
         }
+
+        return 0;
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1)
+            description = DESCRIPTIONS[0];
+        else
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
     @Override

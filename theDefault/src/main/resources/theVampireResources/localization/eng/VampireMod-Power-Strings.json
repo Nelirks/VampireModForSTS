@@ -18,5 +18,9 @@
 "theVampire:Anticipation": {
         "NAME": "Anticipation",
         "DESCRIPTIONS" : ["Whenever you draw Blood, heal #b", " HP."]
+},
+"theVampire:CrimsonShield": {
+        "NAME": "Crimson Shield",
+        "DESCRIPTIONS" : ["Converts the next damage you are dealt into Thirst", "Converts the next #b", " damage you are dealt into Thirst"]
 }
 }
