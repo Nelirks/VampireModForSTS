@@ -46,9 +46,9 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     @Override
     public void onVictory () {
         if (owner.hasPower("theVampire:Reserve"))
-            owner.damage(new DamageInfo(owner, amount - owner.getPower("theVampire:Reserve").amount));
+            owner.damage(new DamageInfo(owner, amount - owner.getPower("theVampire:Reserve").amount, DamageInfo.DamageType.HP_LOSS));
         else
-            owner.damage(new DamageInfo(owner, amount));
+            owner.damage(new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS));
     }
 
     @Override
