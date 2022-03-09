@@ -58,7 +58,7 @@ public class Devour extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Settings.GOLD_COLOR.cpy()), 0.3F));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m,-2), -2));
         if(upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
