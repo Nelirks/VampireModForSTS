@@ -54,7 +54,5 @@ public class HitAndFeastAction extends AbstractGameAction{
                         AbstractDungeon.actionManager.addToBottom(action);
             }
         }
-
-        this.tickDuration();
     }
 }

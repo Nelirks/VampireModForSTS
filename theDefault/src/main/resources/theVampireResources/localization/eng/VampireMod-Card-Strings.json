@@ -83,6 +83,14 @@
   "theVampire:CursedFumes": {
     "NAME": "Cursed Fumes",
     "DESCRIPTION": "Apply Vulnerable equal to your thevampire:Thirst to all ennemies."
+  },
+  "theVampire:GiveIn": {
+    "NAME": "Give In",
+    "DESCRIPTION": "thevampire:Feast 50% of your thevampire:Thirst. Deal that much damage.",
+    "UPGRADE_DESCRIPTION": "thevampire:Feast 75% of your thevampire:Thirst. Deal that much damage.",
+    "EXTENDED_DESCRIPTION": [
+      " NL ( thevampire:Feast !M! and deal !D! damage )"
+    ]
   }
 }
 
