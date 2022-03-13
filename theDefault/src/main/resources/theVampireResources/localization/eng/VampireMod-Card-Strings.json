@@ -91,6 +91,10 @@
     "EXTENDED_DESCRIPTION": [
       " NL ( thevampire:Feast !M! and deal !D! damage )"
     ]
+  },
+  "theVampire:RedBlast" : {
+    "NAME" : "Red Blast",
+    "DESCRIPTION" : "Deal !D! damages, gain 4 thevampire:Thirst."
   }
 }
 
