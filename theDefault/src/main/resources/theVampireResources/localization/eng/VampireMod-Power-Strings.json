@@ -21,6 +21,10 @@
 },
 "theVampire:CrimsonShield": {
         "NAME": "Crimson Shield",
-        "DESCRIPTIONS" : ["Converts the next damage you are dealt into Thirst", "Converts the next #b", " damage you are dealt into Thirst"]
+        "DESCRIPTIONS" : ["Converts the next damage you are dealt into Thirst", "Converts the next #b", " damage you are dealt into Thirst."]
+},
+"theVampire:OpenWound": {
+        "NAME": "Open Wound",
+        "DESCRIPTIONS" : ["When you attack this creature this turn, gain #b", " Thirst."]
 }
 }

@@ -91,6 +91,10 @@
     "EXTENDED_DESCRIPTION": [
       " NL ( thevampire:Feast !M! and deal !D! damage )"
     ]
+  },
+  "theVampire:OpenWound": {
+    "NAME": "Open Wound",
+    "DESCRIPTION": "Deal !D! damage. When you attack the creature this turn, gain 1 thevampire:Thirst."
   }
 }
 
