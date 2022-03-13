@@ -95,6 +95,10 @@
   "theVampire:OpenWound": {
     "NAME": "Open Wound",
     "DESCRIPTION": "Deal !D! damage. When you attack the creature this turn, gain 1 thevampire:Thirst."
+  },
+  "theVampire:RedBlast" : {
+    "NAME" : "Red Blast",
+    "DESCRIPTION" : "Deal !D! damages, gain 4 thevampire:Thirst."
   }
 }
 
