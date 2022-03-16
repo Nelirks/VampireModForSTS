@@ -103,6 +103,11 @@
   "theVampire:BloodTax" : {
     "NAME" : "Blood Tax",
     "DESCRIPTION" : "Deal !D! damage to each enemy, then add 1 thevampire:Blood to your draw pile for each enemy hit."
+  },
+  "theVampire:Repent" : {
+    "NAME" : "Repent",
+    "DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted. NL Exhaust.",
+    "UPGRADED_DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted."
   }
 }
 

@@ -44,8 +44,6 @@ public class GiveIn extends AbstractDynamicCard {
 
     public GiveIn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = 50;
-        magicNumber = baseMagicNumber;
         this.baseDamage = 0;
     }
 
@@ -87,7 +85,6 @@ public class GiveIn extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeMagicNumber(25);
         }
 
     }
