@@ -98,7 +98,11 @@
   },
   "theVampire:RedBlast" : {
     "NAME" : "Red Blast",
-    "DESCRIPTION" : "Deal !D! damages, gain 4 thevampire:Thirst."
+    "DESCRIPTION" : "Deal !D! damage, gain 4 thevampire:Thirst."
+  },
+  "theVampire:BloodTax" : {
+    "NAME" : "Blood Tax",
+    "DESCRIPTION" : "Deal !D! damage to each enemy, then add 1 thevampire:Blood to your draw pile for each enemy hit."
   }
 }
 

@@ -22,5 +22,12 @@
       "feasted"
     ],
     "DESCRIPTION" : "To Feast, lose X Thirst."
+  },
+  {
+    "NAMES" : [
+      "blood",
+      "Blood"
+    ],
+    "DESCRIPTION" : "Status that can be used to remove Thirst, or play certain cards."
   }
 ]
