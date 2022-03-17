@@ -26,5 +26,13 @@
 "theVampire:OpenWound": {
         "NAME": "Open Wound",
         "DESCRIPTIONS" : ["When you attack this creature this turn, gain #b", " Thirst."]
+},
+"theVampire:VampireForm": {
+        "NAME": "??? Form",
+        "DESCRIPTIONS" : ["Whenever you play Blood, steal #b ", " HP to each enemy"]
+},
+"theVampire:UpgradedVampireForm": {
+        "NAME": "??? Form+",
+        "DESCRIPTIONS" : ["Whenever you exhaust Blood, steal #b ", " HP to each enemy"]
 }
 }

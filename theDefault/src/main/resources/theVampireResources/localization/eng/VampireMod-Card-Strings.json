@@ -108,6 +108,15 @@
     "NAME" : "Repent",
     "DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted. NL Exhaust.",
     "UPGRADED_DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted."
+  },
+  "theVampire:RedMist" : {
+    "NAME" : "Red Mist",
+    "DESCRIPTION" : "Exhaust up to !M! thevampire:Blood in your draw pile. Gain 1 Intangible for each thevampire:Blood exhausted. NL Exhaust."
+  },
+  "theVampire:VampireForm" : {
+    "NAME" : "??? Form",
+    "DESCRIPTION" : "Whenever you play thevampire:Blood, steal !M! HP to each enemy. NL Ethereal.",
+    "UPGRADED_DESCRIPTION" : "Whenever you exhaust thevampire:Blood, steal !M! HP to each enemy. NL Ethereal."
   }
 }
 
