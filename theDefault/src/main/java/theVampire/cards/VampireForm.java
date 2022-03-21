@@ -1,6 +1,7 @@
 package theVampire.cards;
 
 import basemod.AutoAdd;
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -44,6 +45,8 @@ public class VampireForm extends AbstractDynamicCard {
         baseMagicNumber = 2;
         magicNumber = baseMagicNumber;
         isEthereal = true;
+
+        tags.add(BaseModCardTags.FORM);
     }
 
 

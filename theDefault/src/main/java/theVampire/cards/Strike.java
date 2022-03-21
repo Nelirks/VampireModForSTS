@@ -42,6 +42,9 @@ public class Strike extends AbstractDynamicCard {
     public Strike() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+
+        tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STARTER_STRIKE);
     }
 
 
