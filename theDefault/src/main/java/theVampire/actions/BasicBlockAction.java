@@ -2,16 +2,17 @@ package theVampire.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theVampire.cards.Blood;
 
-public class RepentAction extends AbstractGameAction {
-    public RepentAction(AbstractPlayer owner, int amount) {
-        this.target = owner;
+public class BasicBlockAction extends AbstractGameAction {
+
+    public BasicBlockAction(AbstractCreature target, int amount) {
+        this.actionType = ActionType.BLOCK;
+        this.target = target;
         this.amount = amount;
     }
 
@@ -20,7 +21,8 @@ public class RepentAction extends AbstractGameAction {
         for(AbstractCard card : AbstractDungeon.player.drawPile.group) {
             if (card.cardID.equals("theVampire:Blood")) {
                 addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.drawPile));
-                addToBot(new HealAction(target, target, amount));
+                addToBot(new GainBlockAction(target, amount));
+                break;
             }
         }
         isDone = true;

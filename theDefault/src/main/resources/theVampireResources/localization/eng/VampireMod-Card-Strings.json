@@ -117,6 +117,22 @@
     "NAME" : "??? Form",
     "DESCRIPTION" : "Whenever you play thevampire:Blood, steal !M! HP to each enemy. NL Ethereal.",
     "UPGRADED_DESCRIPTION" : "Whenever you exhaust thevampire:Blood, steal !M! HP to each enemy. NL Ethereal."
+  },
+  "theVampire:Strike" : {
+    "NAME" : "Strike",
+    "DESCRIPTION" : "Deal !D! damage."
+  },
+  "theVampire:Defend" : {
+    "NAME" : "Defend",
+    "DESCRIPTION" : "Gain !B! block."
+  },
+  "theVampire:BasicBlock" : {
+    "NAME" : "BasicBlock (TO RENAME)",
+    "DESCRIPTION" : "Exhaust 1 thevampire:Blood from your draw pile to gain !B! block."
+  },
+  "theVampire:BasicAttack" : {
+    "NAME" : "BasicAttack (TO RENAME)",
+    "DESCRIPTION" : "Deal !D! damage. NL Add 1 thevampire:Blood to your draw pile."
   }
 }
 
