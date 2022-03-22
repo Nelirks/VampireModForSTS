@@ -133,6 +133,10 @@
   "theVampire:BasicAttack" : {
     "NAME" : "BasicAttack (TO RENAME)",
     "DESCRIPTION" : "Deal !D! damage. NL Add 1 thevampire:Blood to your draw pile."
+  },
+  "theVampire:SharedBurden" : {
+    "NAME" : "Shared Burden",
+    "DESCRIPTION" : "apply !M! Vulnerable. gain !M! thevampire:Thirst."
   }
 }
 
