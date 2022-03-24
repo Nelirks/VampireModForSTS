@@ -49,7 +49,7 @@ public class BloodTax extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BloodTaxAction(damage));
+        addToBot(new BloodTaxAction(p, damage));
     }
 
 

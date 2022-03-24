@@ -8,8 +8,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theVampire.cards.Blood;
 
 public class BloodTaxAction extends AbstractGameAction {
-    public BloodTaxAction(int damageAmount) {
+    public BloodTaxAction(AbstractCreature source, int damageAmount) {
+        this.source = source;
         amount = damageAmount;
+        this.actionType = ActionType.DAMAGE;
     }
 
     @Override

@@ -24,9 +24,8 @@ public class GiveIn extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Attack.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-
-    // /TEXT DECLARATION/
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    // /TEXT DECLARATION/
 
 
     // STAT DECLARATION

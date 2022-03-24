@@ -3,17 +3,18 @@ package theVampire.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class BasicBlockAction extends AbstractGameAction {
 
-    public BasicBlockAction(AbstractCreature target, int amount) {
+    public BasicBlockAction(AbstractCreature source, int amount) {
         this.actionType = ActionType.BLOCK;
-        this.target = target;
+        this.source = source;
+        this.target = source;
         this.amount = amount;
+        this.actionType = ActionType.BLOCK;
     }
 
     @Override

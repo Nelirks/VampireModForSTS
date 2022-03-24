@@ -11,9 +11,11 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 
 public class RedMistAction extends AbstractGameAction {
-    public RedMistAction(AbstractPlayer owner, int amount) {
-        this.target = owner;
+    public RedMistAction(AbstractPlayer source, int amount) {
+        this.source = source;
+        this.target = source;
         this.amount = amount;
+        this.actionType = ActionType.POWER;
     }
 
     @Override
