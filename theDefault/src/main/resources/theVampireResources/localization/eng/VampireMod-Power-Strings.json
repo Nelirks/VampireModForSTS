@@ -34,5 +34,9 @@
 "theVampire:UpgradedVampireForm": {
         "NAME": "??? Form+",
         "DESCRIPTIONS" : ["Whenever you exhaust Blood, steal #b ", " HP to each enemy"]
+},
+"theVampire:DelightInTheHunt": {
+        "NAME": "Delight In The Hunt",
+        "DESCRIPTIONS" : ["Whenever you deal damage to an enemy with Vulnerable, add #b ", " thevampire:Blood to your draw pile."]
 }
 }

@@ -111,7 +111,7 @@
   },
   "theVampire:RedMist" : {
     "NAME" : "Red Mist",
-    "DESCRIPTION" : "Exhaust up to !M! thevampire:Blood in your draw pile. Gain 1 Intangible for each thevampire:Blood exhausted. NL Exhaust."
+    "DESCRIPTION" : "Exhaust up to !M! thevampire:Blood in your draw pile. Gain that much Intangible. NL Exhaust."
   },
   "theVampire:VampireForm" : {
     "NAME" : "??? Form",
@@ -144,6 +144,18 @@
     "EXTENDED_DESCRIPTION" : [
       " NL ( Gain !M! Block )"
     ]
+  },
+  "theVampire:FinalBlow" : {
+    "NAME" : "Final Blow",
+    "DESCRIPTION" : "Deal !M! damage for each stack of Vulnerable on the target. NL Remove all its vulnerable.",
+    "EXTENDED_DESCRIPTION" : [
+      " NL ( Deal !D! damage )"
+    ]
+  },
+  "theVampire:DelightInTheHunt" : {
+    "NAME" : "Delight In The Hunt",
+    "DESCRIPTION" : "Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile.",
+    "UPGRADED_DESCRIPTION" : "Innate. NL Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile."
   }
 }
 
