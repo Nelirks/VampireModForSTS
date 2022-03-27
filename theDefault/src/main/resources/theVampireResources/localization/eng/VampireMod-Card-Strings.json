@@ -136,7 +136,7 @@
   },
   "theVampire:SharedBurden" : {
     "NAME" : "Shared Burden",
-    "DESCRIPTION" : "apply !M! Vulnerable. gain !M! thevampire:Thirst."
+    "DESCRIPTION" : "Apply !M! Vulnerable. NL Gain !M! thevampire:Thirst."
   },
   "theVampire:Satiated" : {
     "NAME" : "Satiated",
