@@ -156,6 +156,14 @@
     "NAME" : "Delight In The Hunt",
     "DESCRIPTION" : "Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile.",
     "UPGRADED_DESCRIPTION" : "Innate. NL Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile."
+  },
+  "theVampire:KillerIntents" : {
+    "NAME" : "Killer Intents",
+    "DESCRIPTION" : "Deal !D! damage. If the target is vulnerable, repeat."
+  },
+  "theVampire:BloodFrenzy" : {
+    "NAME" : "Blood Frenzy",
+    "DESCRIPTION" : "Deal !M! times !D! damage. NL Costs 1 less for each thevampire:Blood in your draw pile. "
   }
 }
 
