@@ -43,41 +43,44 @@ public class GiveIn extends AbstractDynamicCard {
 
     public GiveIn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 0;
+        baseDamage = 0;
+        baseMagicNumber = 50;
+        magicNumber = baseMagicNumber;
     }
 
     private void updateValues() {
         if (AbstractDungeon.player.hasPower("theVampire:Thirst"))
-            baseMagicNumber = AbstractDungeon.player.getPower("theVampire:Thirst").amount*(upgraded ? 75 : 50)/100;
+            defaultBaseSecondMagicNumber = AbstractDungeon.player.getPower("theVampire:Thirst").amount*(upgraded ? 75 : 50)/100;
         else
-            baseMagicNumber = 0;
-        baseDamage = baseMagicNumber;
+            defaultBaseSecondMagicNumber = 0;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber;
+        baseDamage = defaultBaseSecondMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         updateValues();
         this.calculateCardDamage(m);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThirstPower(p, 0), -baseDamage));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThirstPower(p, 0), -defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn)));
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
     public void applyPowers() {
         updateValues();
         super.applyPowers();
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
     public void onMoveToDiscard() {
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION);
+        this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
-        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
