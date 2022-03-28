@@ -44,6 +44,7 @@ public class Blood extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = 2;
         magicNumber = baseMagicNumber;
+        exhaust = true;
     }
 
 

@@ -18,7 +18,7 @@ public class BloodTaxAction extends AbstractGameAction {
     public void update() {
         for (AbstractCreature m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             m.damage(new DamageInfo(m, amount));
-            if (m.lastDamageTaken > 0) addToBot(new MakeTempCardInDrawPileAction(new Blood(), 1, true, true));
+            if (!m.isDead && m.lastDamageTaken > 0) addToBot(new MakeTempCardInDrawPileAction(new Blood(), 1, true, true));
         }
         if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
             AbstractDungeon.actionManager.clearPostCombatActions();
