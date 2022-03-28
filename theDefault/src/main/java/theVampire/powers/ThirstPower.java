@@ -57,7 +57,7 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     @Override
     public void reducePower(int reduceAmount) {
         super.reducePower(reduceAmount);
-        if (this.amount == 0) {
+        if (this.amount <= 0) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "theVampire:Thirst"));
         }
     }
@@ -65,7 +65,7 @@ public class ThirstPower extends AbstractPower implements CloneablePowerInterfac
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (this.amount == 0) {
+        if (this.amount <= 0) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "theVampire:Thirst"));
         }
     }

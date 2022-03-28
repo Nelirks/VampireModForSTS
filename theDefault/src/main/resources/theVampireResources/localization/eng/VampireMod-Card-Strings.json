@@ -55,7 +55,7 @@
   "theVampire:Repent" : {
     "NAME" : "Repent",
     "DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted. NL Exhaust.",
-    "UPGRADED_DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted."
+    "UPGRADE_DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted."
   },
   "theVampire:RedMist" : {
     "NAME" : "Red Mist",
@@ -64,7 +64,7 @@
   "theVampire:VampireForm" : {
     "NAME" : "??? Form",
     "DESCRIPTION" : "Whenever you play thevampire:Blood, steal !M! HP to each enemy. NL Ethereal.",
-    "UPGRADED_DESCRIPTION" : "Whenever you exhaust thevampire:Blood, steal !M! HP to each enemy. NL Ethereal."
+    "UPGRADE_DESCRIPTION" : "Whenever you exhaust thevampire:Blood, steal !M! HP to each enemy. NL Ethereal."
   },
   "theVampire:Strike" : {
     "NAME" : "Strike",
@@ -103,7 +103,7 @@
   "theVampire:DelightInTheHunt" : {
     "NAME" : "Delight In The Hunt",
     "DESCRIPTION" : "Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile.",
-    "UPGRADED_DESCRIPTION" : "Innate. NL Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile."
+    "UPGRADE_DESCRIPTION" : "Innate. NL Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile."
   },
   "theVampire:KillerIntents" : {
     "NAME" : "Killer Intents",
@@ -115,7 +115,12 @@
   },
   "theVampire:UnholyMight" : {
     "NAME" : "Unholy Might",
-    "DESCRIPTION" : "Gain !M! Strength and !theVampire:SecondMagic! Thirst."
+    "DESCRIPTION" : "Gain !M! Strength and !theVampire:SecondMagic! thevampire:Thirst."
+  },
+  "theVampire:RejuvenatingDrink" : {
+    "NAME" : "Rejuvenating Drink",
+    "DESCRIPTION" : "Exhaust !M! thevampire:Blood from your draw pile : gain !M! energy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Exhaust !M! thevampire:Blood from your draw pile : gain !M! energy and lose !theVampire:SecondMagic! thevampire:Thirst. NL Exhaust."
   }
 }
 

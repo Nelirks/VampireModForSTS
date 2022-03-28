@@ -50,7 +50,7 @@ public class GiveIn extends AbstractDynamicCard {
 
     private void updateValues() {
         if (AbstractDungeon.player.hasPower("theVampire:Thirst"))
-            defaultBaseSecondMagicNumber = AbstractDungeon.player.getPower("theVampire:Thirst").amount*(upgraded ? 75 : 50)/100;
+            defaultBaseSecondMagicNumber = AbstractDungeon.player.getPower("theVampire:Thirst").amount*magicNumber/100;
         else
             defaultBaseSecondMagicNumber = 0;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber;
@@ -87,6 +87,8 @@ public class GiveIn extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeMagicNumber(25);
+            initializeDescription();
         }
 
     }
