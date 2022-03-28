@@ -10,7 +10,7 @@
   },
   "theVampire:Temptation": {
     "NAME": "Temptation",
-    "DESCRIPTION": "Deal !D! damage 2 times. thevampire:Feast !M! : gain !M! Strength and !M! Blood."
+    "DESCRIPTION": "thevampire:Feast !M! : gain !M! Strength and !M! Blood. NL Deal !D! damage 2 times."
   },
   "theVampire:SelfControl": {
     "NAME": "Self Control",

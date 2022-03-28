@@ -39,7 +39,7 @@ public class Temptation extends AbstractDynamicCard {
 
     public Temptation() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = 2;
+        baseDamage = 3;
         baseMagicNumber = 1;
         magicNumber = baseMagicNumber;
     }
@@ -48,13 +48,15 @@ public class Temptation extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int addedStrength = 0;
         if (p.hasPower("theVampire:Thirst") && p.getPower("theVampire:Thirst").amount >= magicNumber) {
             addToBot(new ApplyPowerAction(p, p, new ThirstPower(p, -magicNumber)));
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
             addToBot(new MakeTempCardInDrawPileAction(new Blood(), magicNumber, true, true));
+            addedStrength = magicNumber;
         }
-        addToBot(new DamageAction(m, new DamageInfo(p, damage)));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage + addedStrength)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage + addedStrength)));
     }
 
     // Upgraded stats.
