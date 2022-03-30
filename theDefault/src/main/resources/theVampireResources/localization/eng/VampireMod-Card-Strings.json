@@ -121,6 +121,19 @@
     "NAME" : "Rejuvenating Drink",
     "DESCRIPTION" : "Exhaust !M! thevampire:Blood from your draw pile : gain !M! energy. NL Exhaust.",
     "UPGRADE_DESCRIPTION" : "Exhaust !M! thevampire:Blood from your draw pile : gain !M! energy and lose !theVampire:SecondMagic! thevampire:Thirst. NL Exhaust."
+  },
+  "theVampire:QuenchTheThirst" : {
+    "NAME" : "Quench The Thirst",
+    "DESCRIPTION" : "thevampire:Feast !M! : Heal !theVampire:SecondMagic! HP. NL Deal !D! damage."
+  },
+  "theVampire:ReadyToHunt" : {
+    "NAME" : "Ready To Hunt",
+    "DESCRIPTION" : "Gain !M! Thirst. Draw !theVampire:SecondMagic! additional card next turn.",
+    "UPGRADE_DESCRIPTION" : "Gain !M! Thirst. Draw !theVampire:SecondMagic! additional cards next turn."
+  },
+  "theVampire:Impersonate" : {
+    "NAME" : "Impersonate",
+    "DESCRIPTION" : "thevampire:Feast !M! : Add a random form to your hand. It costs 0 this turn."
   }
 }
 
