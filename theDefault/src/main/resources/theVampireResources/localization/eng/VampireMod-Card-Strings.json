@@ -35,9 +35,9 @@
   },
   "theVampire:GiveIn": {
     "NAME": "Give In",
-    "DESCRIPTION": "thevampire:Feast !M! % of your thevampire:Thirst. Deal that much damage.",
+    "DESCRIPTION": "thevampire:Feast !M! % of your thevampire:Thirst. Heal that much and deal that much damage.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( thevampire:Feast !theVampire:SecondMagic! and deal !D! damage )"
+      " NL ( thevampire:Feast !theVampire:SecondMagic!, heal !theVampire:SecondMagic! and deal !D! damage )"
     ]
   },
   "theVampire:OpenWound": {
@@ -138,6 +138,10 @@
   "theVampire:Purify" : {
     "NAME" : "Purify",
     "DESCRIPTION" : "Gain !B! block. Lose all your Vulnerable, Weak and Frail. NL Exhaust."
+  },
+  "theVampire:Appetizer" : {
+    "NAME" : "Appetizer",
+    "DESCRIPTION" : "Innate. NL Deal !D! damage. Gain !M! thevampire:Thirst. NL Exhaust."
   }
 }
 
