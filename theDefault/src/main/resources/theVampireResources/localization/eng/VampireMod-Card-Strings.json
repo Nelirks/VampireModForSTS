@@ -134,6 +134,10 @@
   "theVampire:Impersonate" : {
     "NAME" : "Impersonate",
     "DESCRIPTION" : "thevampire:Feast !M! : Add a random form to your hand. It costs 0 this turn."
+  },
+  "theVampire:Purify" : {
+    "NAME" : "Purify",
+    "DESCRIPTION" : "Gain !B! block. Lose all your Vulnerable, Weak and Frail. NL Exhaust."
   }
 }
 
