@@ -22,10 +22,24 @@ public class RedMistAction extends AbstractGameAction {
     public void update() {
         int finalAmount = 0;
         for(AbstractCard card : AbstractDungeon.player.drawPile.group) {
+            if (finalAmount >= amount) break;
             if (card.cardID.equals("theVampire:Blood")) {
                 addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.drawPile));
                 finalAmount += 1;
-                if (finalAmount >= amount) break;
+            }
+        }
+        for(AbstractCard card : AbstractDungeon.player.discardPile.group) {
+            if (finalAmount >= amount) break;
+            if (card.cardID.equals("theVampire:Blood")) {
+                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.discardPile));
+                finalAmount += 1;
+            }
+        }
+        for(AbstractCard card : AbstractDungeon.player.hand.group) {
+            if (finalAmount >= amount) break;
+            if (card.cardID.equals("theVampire:Blood")) {
+                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+                finalAmount += 1;
             }
         }
         addToBot(new ApplyPowerAction(target, target, new IntangiblePlayerPower(target, finalAmount)));

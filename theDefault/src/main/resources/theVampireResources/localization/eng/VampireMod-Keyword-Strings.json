@@ -29,5 +29,12 @@
       "Blood"
     ],
     "DESCRIPTION" : "Status that can be used to remove Thirst, or play certain cards."
+  },
+  {
+    "NAMES" : [
+      "consume",
+      "Consume"
+    ],
+    "DESCRIPTION" : "To consume, exhaust X cards from your draw pile, your discard pile, or your hand."
   }
 ]

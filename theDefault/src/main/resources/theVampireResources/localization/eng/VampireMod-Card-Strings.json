@@ -54,12 +54,12 @@
   },
   "theVampire:Repent" : {
     "NAME" : "Repent",
-    "DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Exhaust all thevampire:Blood in your draw pile. Heal 1 HP for each thevampire:Blood exhausted."
+    "DESCRIPTION" : "thevampire:Consume all your thevampire:Blood. Heal that much HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "thevampire:Consume all your thevampire:Blood. Heal that much HP."
   },
   "theVampire:RedMist" : {
     "NAME" : "Red Mist",
-    "DESCRIPTION" : "Exhaust up to !M! thevampire:Blood in your draw pile. Gain that much Intangible. NL Exhaust."
+    "DESCRIPTION" : "thevampire:Consume up to !M! thevampire:Blood. Gain that much Intangible. NL Exhaust."
   },
   "theVampire:VampireForm" : {
     "NAME" : "??? Form",
@@ -76,7 +76,7 @@
   },
   "theVampire:BasicBlock" : {
     "NAME" : "BasicBlock (TO RENAME)",
-    "DESCRIPTION" : "Exhaust 1 thevampire:Blood from your draw pile to gain !B! block."
+    "DESCRIPTION" : "thevampire:Consume 1 thevampire:Blood : Gain !B! block."
   },
   "theVampire:BasicAttack" : {
     "NAME" : "BasicAttack (TO RENAME)",
@@ -119,8 +119,8 @@
   },
   "theVampire:RejuvenatingDrink" : {
     "NAME" : "Rejuvenating Drink",
-    "DESCRIPTION" : "Exhaust !M! thevampire:Blood from your draw pile : gain !M! energy. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Exhaust !M! thevampire:Blood from your draw pile : gain !M! energy and lose !theVampire:SecondMagic! thevampire:Thirst. NL Exhaust."
+    "DESCRIPTION" : "thevampire:Consume !M! thevampire:Blood : gain !M! energy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "thevampire:Consume !M! thevampire:Blood : gain !M! energy and lose !theVampire:SecondMagic! thevampire:Thirst. NL Exhaust."
   },
   "theVampire:QuenchTheThirst" : {
     "NAME" : "Quench The Thirst",

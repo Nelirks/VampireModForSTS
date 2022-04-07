@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theVampire.powers.ThirstPower;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,16 +28,28 @@ public class RejuvenatingDrinkAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        List<AbstractCard> bloodToExhaust= new ArrayList<>();
+        List<AbstractGameAction> exhaustActions= new ArrayList<>();
         for(AbstractCard card : AbstractDungeon.player.drawPile.group) {
+            if (exhaustActions.size() == amount) break;
             if (card.cardID.equals("theVampire:Blood")) {
-                bloodToExhaust.add(card);
-                if (bloodToExhaust.size() == amount) break;
+                exhaustActions.add(new ExhaustSpecificCardAction(card, AbstractDungeon.player.drawPile));
             }
         }
-        if (bloodToExhaust.size() == amount) {
-            for (AbstractCard card: bloodToExhaust) {
-                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.drawPile));
+        for(AbstractCard card : AbstractDungeon.player.discardPile.group) {
+            if (exhaustActions.size() == amount) break;
+            if (card.cardID.equals("theVampire:Blood")) {
+                exhaustActions.add(new ExhaustSpecificCardAction(card, AbstractDungeon.player.discardPile));
+            }
+        }
+        for(AbstractCard card : AbstractDungeon.player.hand.group) {
+            if (exhaustActions.size() == amount) break;
+            if (card.cardID.equals("theVampire:Blood")) {
+                exhaustActions.add(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+            }
+        }
+        if (exhaustActions.size() == amount) {
+            for (AbstractGameAction action: exhaustActions) {
+                addToBot(action);
             }
             addToBot(new GainEnergyAction(amount));
             if (isUpgraded) addToBot(new ApplyPowerAction(target, source, new ThirstPower(target, -4)));

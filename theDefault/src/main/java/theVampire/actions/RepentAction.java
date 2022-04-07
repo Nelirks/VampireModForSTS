@@ -19,12 +19,26 @@ public class RepentAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        int healAmount = 0;
         for(AbstractCard card : AbstractDungeon.player.drawPile.group) {
             if (card.cardID.equals("theVampire:Blood")) {
                 addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.drawPile));
-                addToBot(new HealAction(target, target, amount));
+                healAmount += amount;
             }
         }
+        for(AbstractCard card : AbstractDungeon.player.discardPile.group) {
+            if (card.cardID.equals("theVampire:Blood")) {
+                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.discardPile));
+                healAmount += amount;
+            }
+        }
+        for(AbstractCard card : AbstractDungeon.player.hand.group) {
+            if (card.cardID.equals("theVampire:Blood")) {
+                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+                healAmount += amount;
+            }
+        }
+        addToBot(new HealAction(target, target, healAmount));
         isDone = true;
     }
 }
