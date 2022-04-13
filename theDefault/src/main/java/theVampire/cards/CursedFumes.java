@@ -54,13 +54,9 @@ public class CursedFumes extends AbstractDynamicCard {
         if (!p.hasPower("theVampire:Thirst")) {
             return;
         }
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flash();
-
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if (!monster.isDead && !monster.isDying) {
-                    this.addToBot(new ApplyPowerAction(monster, p, new VulnerablePower(monster, p.getPower("theVampire:Thirst").amount, false)));
-                }
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if (!monster.isDead && !monster.isDying) {
+                this.addToBot(new ApplyPowerAction(monster, p, new VulnerablePower(monster, p.getPower("theVampire:Thirst").amount, false)));
             }
         }
     }

@@ -136,7 +136,64 @@
   },
   "theVampire:SharedBurden" : {
     "NAME" : "Shared Burden",
-    "DESCRIPTION" : "apply !M! Vulnerable. gain !M! thevampire:Thirst."
+    "DESCRIPTION" : "Apply !M! Vulnerable. NL Gain !M! thevampire:Thirst."
+  },
+  "theVampire:Satiated" : {
+    "NAME" : "Satiated",
+    "DESCRIPTION" : "Gain !B! Block for each thevampire:Blood in your hand.",
+    "EXTENDED_DESCRIPTION" : [
+      " NL ( Gain !M! Block )"
+    ]
+  },
+  "theVampire:FinalBlow" : {
+    "NAME" : "Final Blow",
+    "DESCRIPTION" : "Deal !M! damage for each stack of Vulnerable on the target. NL Remove all its vulnerable.",
+    "EXTENDED_DESCRIPTION" : [
+      " NL ( Deal !D! damage )"
+    ]
+  },
+  "theVampire:DelightInTheHunt" : {
+    "NAME" : "Delight In The Hunt",
+    "DESCRIPTION" : "Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Whenever you deal damage to an enemy with Vulnerable, add 1 thevampire:Blood to your draw pile."
+  },
+  "theVampire:KillerIntents" : {
+    "NAME" : "Killer Intents",
+    "DESCRIPTION" : "Deal !D! damage. If the target is vulnerable, repeat."
+  },
+  "theVampire:BloodFrenzy" : {
+    "NAME" : "Blood Frenzy",
+    "DESCRIPTION" : "Deal !M! times !D! damage. NL Costs 1 less for each thevampire:Blood in your draw pile."
+  },
+  "theVampire:UnholyMight" : {
+    "NAME" : "Unholy Might",
+    "DESCRIPTION" : "Gain !M! Strength and !theVampire:SecondMagic! thevampire:Thirst."
+  },
+  "theVampire:RejuvenatingDrink" : {
+    "NAME" : "Rejuvenating Drink",
+    "DESCRIPTION" : "thevampire:Consume !M! thevampire:Blood : gain !M! energy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "thevampire:Consume !M! thevampire:Blood : gain !M! energy and lose !theVampire:SecondMagic! thevampire:Thirst. NL Exhaust."
+  },
+  "theVampire:QuenchTheThirst" : {
+    "NAME" : "Quench The Thirst",
+    "DESCRIPTION" : "thevampire:Feast !M! : Heal !theVampire:SecondMagic! HP. NL Deal !D! damage."
+  },
+  "theVampire:ReadyToHunt" : {
+    "NAME" : "Ready To Hunt",
+    "DESCRIPTION" : "Gain !M! Thirst. Draw !theVampire:SecondMagic! additional card next turn.",
+    "UPGRADE_DESCRIPTION" : "Gain !M! Thirst. Draw !theVampire:SecondMagic! additional cards next turn."
+  },
+  "theVampire:Impersonate" : {
+    "NAME" : "Impersonate",
+    "DESCRIPTION" : "thevampire:Feast !M! : Add a random form to your hand. It costs 0 this turn."
+  },
+  "theVampire:Purify" : {
+    "NAME" : "Purify",
+    "DESCRIPTION" : "Gain !B! block. Lose all your Vulnerable, Weak and Frail. NL Exhaust."
+  },
+  "theVampire:Appetizer" : {
+    "NAME" : "Appetizer",
+    "DESCRIPTION" : "Innate. NL Deal !D! damage. Gain !M! thevampire:Thirst. NL Exhaust."
   },
   "theVampire:Retreat" : {
     "NAME" : "Retreat",

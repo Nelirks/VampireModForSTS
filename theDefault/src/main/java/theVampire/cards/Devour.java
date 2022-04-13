@@ -38,10 +38,8 @@ public class Devour extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DMG = 12;
 
     // /STAT DECLARATION/
 
@@ -71,7 +69,6 @@ public class Devour extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
