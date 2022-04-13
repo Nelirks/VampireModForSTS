@@ -137,6 +137,10 @@
   "theVampire:SharedBurden" : {
     "NAME" : "Shared Burden",
     "DESCRIPTION" : "apply !M! Vulnerable. gain !M! thevampire:Thirst."
+  },
+  "theVampire:Retreat" : {
+    "NAME" : "Retreat",
+    "DESCRIPTION" : "gain !B! block, apply !M! Weak to each Vulnerable enemy."
   }
 }
 
