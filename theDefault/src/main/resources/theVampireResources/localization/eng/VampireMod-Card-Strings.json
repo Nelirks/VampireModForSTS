@@ -201,7 +201,12 @@
   },
   "theVampire:AimForTheVeins" : {
     "NAME" : "Aim For The Veins",
-    "DESCRIPTION" : "Deal !D! damage. NL If the enemy is vulnerable, add 1 thevampire:Thirst to your draw pile."
+    "DESCRIPTION" : "Deal !D! damage. NL If the enemy is Vulnerable, add 1 thevampire:Thirst to your draw pile."
+  },
+  "theVampire:HypnoticGaze" : {
+    "NAME" : "Hypnotic Gaze",
+    "DESCRIPTION" : "Double each enemy's Vulnerable",
+    "UPGRADE_DESCRIPTION" : "Triple each enemy's Vulnerable."
   }
 }
 
