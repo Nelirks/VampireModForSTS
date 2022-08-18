@@ -197,7 +197,11 @@
   },
   "theVampire:Retreat" : {
     "NAME" : "Retreat",
-    "DESCRIPTION" : "gain !B! block, apply !M! Weak to each Vulnerable enemy."
+    "DESCRIPTION" : "Gain !B! block, apply !M! Weak to each Vulnerable enemy."
+  },
+  "theVampire:AimForTheVeins" : {
+    "NAME" : "Aim For The Veins",
+    "DESCRIPTION" : "Deal !D! damage. NL If the enemy is vulnerable, add 1 thevampire:Thirst to your draw pile."
   }
 }
 
