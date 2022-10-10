@@ -211,6 +211,10 @@
   "theVampire:Exsanguinate" : {
     "NAME" : "Exsanguinate",
     "DESCRIPTION" : "deals !D! damages !M! times, add one blood to you deck per hit"
+  },
+  "theVampire:FlashyStrike" : {
+    "NAME" : "Flashy Strike",
+    "DESCRIPTION" : "deals !D! damages, apply 1 Vulnerable to everyone"
   }
 }
 
