@@ -127,7 +127,7 @@
     "DESCRIPTION" : "Gain !B! block."
   },
   "theVampire:BasicBlock" : {
-    "NAME" : "BasicBlock (TO RENAME)",
+    "NAME" : "Coagulate",
     "DESCRIPTION" : "Exhaust 1 thevampire:Blood from your draw pile to gain !B! block."
   },
   "theVampire:BasicAttack" : {
@@ -201,7 +201,7 @@
   },
   "theVampire:AimForTheVeins" : {
     "NAME" : "Aim For The Veins",
-    "DESCRIPTION" : "Deal !D! damage. NL If the enemy is Vulnerable, add 1 thevampire:Thirst to your draw pile."
+    "DESCRIPTION" : "Deal !D! damage. NL If the enemy is Vulnerable, add 1 thevampire:Blood to your draw pile."
   },
   "theVampire:HypnoticGaze" : {
     "NAME" : "Hypnotic Gaze",

@@ -35,8 +35,8 @@ public class BasicBlock extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_PLUS_BLOCK = 12;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 6;
 
     // /STAT DECLARATION/
 
