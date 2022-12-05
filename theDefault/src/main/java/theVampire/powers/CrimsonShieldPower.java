@@ -48,7 +48,10 @@ public class CrimsonShieldPower extends AbstractPower implements CloneablePowerI
     }
 
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0) {
+        if (info.type != DamageInfo.DamageType.HP_LOSS) {
+            return damageAmount;
+        }
+        if (damageAmount > 0 ) {
             this.addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
             this.addToTop(new ApplyPowerAction(owner, owner, new ThirstPower(owner, damageAmount)));
         }

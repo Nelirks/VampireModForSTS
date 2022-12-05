@@ -215,6 +215,10 @@
   "theVampire:FlashyStrike" : {
     "NAME" : "Flashy Strike",
     "DESCRIPTION" : "deals !D! damages, apply 1 Vulnerable to everyone"
+  },
+  "theVampire:CrossingWater" : {
+    "NAME" : "Crossing Water",
+    "DESCRIPTION" : "gain !B! block, you cannot attack for the rest of the turn"
   }
 }
 
