@@ -10,7 +10,7 @@
     "NAME": "Ouroboros Sigil",
     "FLAVOR": "Let the feast begin.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #b2 Thirst and add #b1 Blood in your draw pile."
+      "At the start of each combat, gain #b2 Thirst and add #b1 Blood in your hand."
     ]
   },
   "theVampire:DefaultClickableRelic": {

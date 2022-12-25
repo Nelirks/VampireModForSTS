@@ -15,9 +15,12 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import theVampire.cards.Blood;
 
 public class ExsanguinateAction extends AbstractGameAction {
+    private final DamageInfo info;
     int magicNumber;
-    public ExsanguinateAction(AbstractCreature target, AbstractCreature source, int baseDamage, int magicNumber) {
-        setValues(target, source, baseDamage);
+    public ExsanguinateAction(AbstractCreature target, DamageInfo info, int magicNumber) {
+        this.info = info;
+        this.setValues(target, info);
+        this.actionType = ActionType.DAMAGE;
         this.magicNumber = magicNumber;
         this.actionType = ActionType.DAMAGE;
     }
@@ -25,7 +28,7 @@ public class ExsanguinateAction extends AbstractGameAction {
     public void update() {
         int x = 0;
         for (int n = 0; n < magicNumber; ++n) {
-            target.damage(new DamageInfo(target, amount));
+            this.target.damage(this.info);
             if (this.target.lastDamageTaken > 0) {
                 ++x;
             }

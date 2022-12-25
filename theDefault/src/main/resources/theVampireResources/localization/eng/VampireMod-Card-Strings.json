@@ -128,10 +128,10 @@
   },
   "theVampire:BasicBlock" : {
     "NAME" : "Coagulate",
-    "DESCRIPTION" : "Exhaust 1 thevampire:Blood from your draw pile to gain !B! block."
+    "DESCRIPTION" : "thevampire:Consume 1 thevampire:Blood  to gain !B! block."
   },
   "theVampire:BasicAttack" : {
-    "NAME" : "BasicAttack (TO RENAME)",
+    "NAME" : "Drink",
     "DESCRIPTION" : "Deal !D! damage. NL Add 1 thevampire:Blood to your draw pile."
   },
   "theVampire:SharedBurden" : {
@@ -219,6 +219,26 @@
   "theVampire:CrossingWater" : {
     "NAME" : "Crossing Water",
     "DESCRIPTION" : "gain !B! block, you cannot attack for the rest of the turn"
+  },
+  "theVampire:AwaitInvitation" : {
+    "NAME" : "Await Invitation",
+    "DESCRIPTION" : "gain !B! block, gain !M! Strength at the end of turn"
+  },
+  "theVampire:Gore" : {
+    "NAME" : "Gore",
+    "DESCRIPTION" : "Deal !D! Damages, if the enemy is Vulnerable, Apply !M! Vulnerable"
+  },
+  "theVampire:MenacingPosture" : {
+    "NAME" : "Menacing Posture",
+    "DESCRIPTION" : "Whenever you play a non-Attack card, gain 1 Vigor"
+  },
+  "theVampire:BonAppetit" : {
+    "NAME" : "Bon Appetit !",
+    "DESCRIPTION" : "Innate. Apply 2 Vulnerable and 2 Weak to every enemy, gain 3 Strength this turn. Exhaust"
+  },
+  "theVampire:RedHanded" : {
+    "NAME" : "Red-Handed",
+    "DESCRIPTION" : "Can only be played if you have thevampire:Blood in your hand, Deals !D! damages"
   }
 }
 
