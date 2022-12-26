@@ -239,6 +239,11 @@
   "theVampire:RedHanded" : {
     "NAME" : "Red-Handed",
     "DESCRIPTION" : "Can only be played if you have thevampire:Blood in your hand, Deals !D! damages"
+  },
+  "theVampire:OneStepAhead" : {
+    "NAME" : "One Step Ahead",
+    "DESCRIPTION" : "if the enemy intend to attack, gain !B! block, otherwise, gain twice this amount next turn",
+    "UPGRADE_DESCRIPTION" : "if the enemy intend to attack, gain !B! block, otherwise, gain thrice this amount next turn"
   }
 }
 
