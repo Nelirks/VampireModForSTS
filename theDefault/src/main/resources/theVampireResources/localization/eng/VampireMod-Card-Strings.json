@@ -242,8 +242,16 @@
   },
   "theVampire:OneStepAhead" : {
     "NAME" : "One Step Ahead",
-    "DESCRIPTION" : "if the enemy intend to attack, gain !B! block, otherwise, gain twice this amount next turn",
-    "UPGRADE_DESCRIPTION" : "if the enemy intend to attack, gain !B! block, otherwise, gain thrice this amount next turn"
+    "DESCRIPTION" : "if the enemy intend to attack, gain !B! block, otherwise, gain twice this amount next turn.",
+    "UPGRADE_DESCRIPTION" : "if the enemy intend to attack, gain !B! block, otherwise, gain thrice this amount next turn."
+  },
+  "theVampire:Restoration" : {
+    "NAME" : "Restoration",
+    "DESCRIPTION" : "Heal for !M! health X times, gain 2 thirst X times, exhaust."
+  },
+  "theVampire:FoulBlood" : {
+    "NAME" : "Foul Blood",
+    "DESCRIPTION" : "Deals !D! damages, consume 1 Blood to apply !M! Weak."
   }
 }
 
