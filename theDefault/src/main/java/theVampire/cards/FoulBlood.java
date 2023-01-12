@@ -39,7 +39,7 @@ public class FoulBlood extends AbstractDynamicCard {
     private static final int UPGRADED_COST = 1;
 
     private static final int MAGIC_NUMBER = 3;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 4;
 
@@ -97,6 +97,7 @@ public class FoulBlood extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             initializeDescription();
         }
     }

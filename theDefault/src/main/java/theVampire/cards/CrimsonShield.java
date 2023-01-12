@@ -35,6 +35,8 @@ public class CrimsonShield extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.NONE;  //   since they don't change much.
     private static final CardType TYPE = CardType.POWER;       //
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final int MAGIC_NUMBER = 1;
+    public static final int UPGRADED_PLUS_MAGIC_NUMBER = 1;
 
     private static final int COST = 1;
 
@@ -43,13 +45,15 @@ public class CrimsonShield extends AbstractDynamicCard {
 
     public CrimsonShield() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = MAGIC_NUMBER;
+        magicNumber = baseMagicNumber;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CrimsonShieldPower(p, 1)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CrimsonShieldPower(p, magicNumber)));
     }
 
 
@@ -58,7 +62,7 @@ public class CrimsonShield extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
+            upgradeMagicNumber(UPGRADED_PLUS_MAGIC_NUMBER);
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

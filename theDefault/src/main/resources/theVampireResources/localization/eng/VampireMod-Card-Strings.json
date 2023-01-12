@@ -78,7 +78,7 @@
   "theVampire:CrimsonShield": {
     "NAME": "Crimson Shield",
     "DESCRIPTION": "Converts the next damage you are dealt into thevampire:Thirst.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Converts the next damage you are dealt into thevampire:Thirst."
+    "UPGRADE_DESCRIPTION": "NL Converts the next 2 damage you are dealt into thevampire:Thirst."
   },
   "theVampire:CursedFumes": {
     "NAME": "Cursed Fumes",
